@@ -1,5 +1,6 @@
 package com.example.chapter3.homework;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CheckBox;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         loopCheckBox = findViewById(R.id.loop_checkbox);
         seekBar = findViewById(R.id.seekbar);
 
+        animationView.setRepeatCount(ObjectAnimator.INFINITE);
         loopCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
